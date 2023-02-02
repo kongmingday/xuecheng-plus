@@ -1,14 +1,14 @@
-package com.xuecheng.xuecheng_plus.service;
+package com.xuecheng.content.service;
 
-import com.xuecheng.xuecheng_plus.model.po.CourseMarket;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.xuecheng.content.model.po.CourseMarket;
 
 /**
  * <p>
  * 课程营销信息 服务类
  * </p>
  *
- * @author itcast
+ * @author eotouch
  * @since 2023-01-26
  */
 public interface CourseMarketService extends IService<CourseMarket> {

@@ -1,28 +1,20 @@
-package com.xuecheng.content.model.po;
+package com.xuecheng.content.model.dto;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.xuecheng.content.model.po.CourseBase;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- * <p>
- * 课程营销信息
- * </p>
- *
+ * @description 课程基本信息Dto
  * @author eotouch
+ * @date 2023-01-26 22:01
+ * @version 1.0
  */
 @Data
-@TableName("course_market")
-public class CourseMarket implements Serializable {
+public class CourseBaseInfoDto extends CourseBase {
 
-    private static final long serialVersionUID = 1L;
-
-    /**
-     * 主键，课程id
-     */
-    private Long id;
 
     /**
      * 收费规则，对应数据字典
@@ -30,9 +22,10 @@ public class CourseMarket implements Serializable {
     private String charge;
 
     /**
-     * 现价
+     * 价格
      */
     private BigDecimal price;
+
 
     /**
      * 原价
@@ -59,5 +52,14 @@ public class CourseMarket implements Serializable {
      */
     private Integer validDays;
 
+    /**
+     * 大分类名称
+     */
+    private String mtName;
+
+    /**
+     * 小分类名称
+     */
+    private String stName;
 
 }
