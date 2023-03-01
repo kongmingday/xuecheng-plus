@@ -175,9 +175,23 @@ public class CourseBaseInfoServiceImpl extends ServiceImpl<CourseBaseMapper, Cou
         return getCourseBaseInfo(courseId);
     }
 
+    @Transactional
     @Override
-    public boolean deleteBaseInfo(){
-
+    public Boolean deleteBaseInfo(Long courseId) {
+        CourseMarket hasMarket = courseMarketService.getById(courseId);
+        CourseBase hasBase = this.getById(courseId);
+        if (hasBase == null){
+            XueChengPlusException.cast("删除数据有误");
+        }
+        boolean marketHasRemove = true;
+        if (hasMarket != null){
+            marketHasRemove = courseMarketService.removeById(courseId);
+        }
+        boolean baseHasRemove = this.removeById(courseId);
+        if (!(baseHasRemove && marketHasRemove)){
+            XueChengPlusException.cast("课程删除失败");
+        }
+        return true;
     }
 
     /**

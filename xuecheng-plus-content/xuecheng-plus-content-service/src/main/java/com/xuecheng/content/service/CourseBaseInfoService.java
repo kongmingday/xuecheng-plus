@@ -62,5 +62,5 @@ public interface CourseBaseInfoService extends IService<CourseBase> {
      * @author eotouch
      * @date 2023-02-02 21:29
      */
-    boolean deleteBaseInfo(Long courseId);
+    Boolean deleteBaseInfo(Long courseId);
 }

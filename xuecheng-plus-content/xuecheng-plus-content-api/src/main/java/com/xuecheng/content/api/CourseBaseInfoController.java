@@ -39,7 +39,7 @@ public class CourseBaseInfoController {
     @ApiOperation("新增课程基础信息")
     @PostMapping("/course")
     public CourseBaseInfoDto createCourseBase(@RequestBody @Validated AddCourseDto addCourseDto){
-        return courseBaseInfoService.createCourseBase(22L, addCourseDto);
+        return courseBaseInfoService.createCourseBase(1232141425L, addCourseDto);
     }
 
     @ApiOperation("根据课程id查询课程基础信息")
@@ -51,13 +51,12 @@ public class CourseBaseInfoController {
     @ApiOperation("修改课程基础信息")
     @PutMapping("/course")
     public CourseBaseInfoDto modifyCourseBase(@RequestBody EditCourseDto editCourseDto){
-        return courseBaseInfoService.updateCourseBase(22L, editCourseDto);
+        return courseBaseInfoService.updateCourseBase(1232141425L, editCourseDto);
     }
 
     @ApiOperation("删除课程基础信息")
     @DeleteMapping("/course/{courseId}")
     public boolean deleteCourseBaseById(@PathVariable Long courseId){
-        courseBaseInfoService.deleteBaseInfo(courseId);
-        return null;
+        return courseBaseInfoService.deleteBaseInfo(courseId);
     }
 }
