@@ -26,7 +26,6 @@ public class DictionaryServiceImpl extends ServiceImpl<DictionaryMapper, Diction
 
         List<Dictionary> list = this.list();
 
-
         return list;
     }
 
@@ -38,7 +37,6 @@ public class DictionaryServiceImpl extends ServiceImpl<DictionaryMapper, Diction
         queryWrapper.eq(Dictionary::getCode, code);
 
         Dictionary dictionary = this.getOne(queryWrapper);
-
 
         return dictionary;
     }

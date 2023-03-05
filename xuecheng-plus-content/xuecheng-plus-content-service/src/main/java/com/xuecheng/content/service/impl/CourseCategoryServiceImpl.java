@@ -2,7 +2,6 @@ package com.xuecheng.content.service.impl;
 
 import com.xuecheng.content.mapper.CourseCategoryMapper;
 import com.xuecheng.content.model.dto.CourseCategoryTreeDto;
-import com.xuecheng.content.model.po.CourseCategory;
 import com.xuecheng.content.service.CourseCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

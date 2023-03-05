@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: system-service
+  cloud:
+    nacos:
+      server-addr: 192.168.25.128:8848
+      discovery:
+        group: xuecheng-plus-project
+        namespace: c55435bc-7798-42f8-858b-3bd4e4eee6ab
+      config:
+        namespace: c55435bc-7798-42f8-858b-3bd4e4eee6ab
+        group: xuecheng-plus-project
+        file-extension: yaml
+        refresh-enabled: true
+
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/xuecheng_plus_system?serverTimezone=UTC&userUnicode=true&useSSL=false&
+#    username: root
+#    password: baihejasmine24
+# 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
+
+
