@@ -51,6 +51,7 @@ public class TeachplanServiceImpl implements TeachplanService {
         }else{
             //取出同父同级别的课程计划数量
             int count = getTeachplanOrderMax(teachplanDto.getCourseId(), teachplanDto.getParentid());
+
             Teachplan teachplanNew = new Teachplan();
             //设置排序号
             teachplanNew.setOrderby(count+1);
@@ -186,7 +187,7 @@ public class TeachplanServiceImpl implements TeachplanService {
         queryWrapper.eq(Teachplan::getParentid,parentId);
         queryWrapper.orderByDesc(Teachplan::getOrderby);
         List<Teachplan> teachplans = teachplanMapper.selectList(queryWrapper);
-        if (teachplans == null){
+        if (teachplans.size() == 0){
             return 1;
         }
         return teachplans.get(0).getOrderby();

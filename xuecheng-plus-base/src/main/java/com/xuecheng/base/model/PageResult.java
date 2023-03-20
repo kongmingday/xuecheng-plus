@@ -1,6 +1,7 @@
 package com.xuecheng.base.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.util.List;
  * @date 2023/01/21
  */
 @Data
+@NoArgsConstructor
 public class PageResult<T> implements Serializable {
 
     // 数据列表

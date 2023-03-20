@@ -24,13 +24,13 @@ public class CourseBaseInfoDto extends CourseBase {
     /**
      * 价格
      */
-    private BigDecimal price;
+    private Float price;
 
 
     /**
      * 原价
      */
-    private BigDecimal originalPrice;
+    private Float originalPrice;
 
     /**
      * 咨询qq

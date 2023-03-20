@@ -12,6 +12,11 @@ spring:
         group: xuecheng-plus-project
         file-extension: yml
         refresh-enabled: true
+        shared-configs:
+          - data-id: feign-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+
 
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver

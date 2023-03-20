@@ -44,18 +44,6 @@ public interface MediaFileService {
 
 
     /**
-     * @description 添加内容到minio
-     * @param bytes 字节数组
-     * @param bucket minio桶
-     * @param objectName 文件名
-     * @param contentType 文件类型
-     * @return void
-     * @author eotouch
-     * @date 2023-03-04 0:21
-     */
-    void addMediaFilesToMinIO(byte[] bytes, String bucket, String objectName, String contentType);
-
-    /**
      * @description 添加文件信息到数据库
      * @param companyId 公司名称
      * @param uploadFileParamsDto 上传文件参数
@@ -137,7 +125,6 @@ public interface MediaFileService {
      * @param filePath 文件路径
      * @param bucket 桶名
      * @param objectName 文件名称
-     * @return void
      * @author eotouch
      * @date 2023-03-05 18:32
      */
